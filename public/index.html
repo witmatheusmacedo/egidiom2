@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <!-- SEO básico -->
+  <title>tartarugas marinhas — tartarugas marinhas</title>
+  <meta name="description" content="[[RESUMO_CURTO]]" />
+
+  <!-- Bibliotecas -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.8.0/dist/tf.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+
+</head>
+<body id="topo">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header role="banner">
+    <div class="wrap">
+      <nav aria-label="Navegação principal">
+        <div class="brand" aria-label="Marca da página">
+          <span aria-hidden="true"></span>
+          <strong>Mar Profundo</strong>
+        </div>
+
+        <div class="nav-links" role="navigation">
+          <a href="#curiosidades">Curiosidades</a>
+          <a href="#fatos">Fatos</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#faq">FAQ</a>
+        </div>
+
+        <div class="controls">
+          <button id="toggleTheme" class="btn ghost" aria-pressed="false" aria-label="Alternar modo claro e escuro">🌙</button>
+          <button id="btnAbrirChatbot" class="btn" aria-label="Abrir chatbot">Abrir Chatbot</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="wrap" role="main">
+    <!-- HERO -->
+    <section class="hero fade-in" aria-labelledby="titulo-hero">
+      <div>
+        <!-- TODO: Substituir o TEMA_DO_PROJETO -->
+        <h1 id="titulo-hero">Arraias</h1>
+        <!-- TODO: Substituir o SLOGAN_IMPACTANTE -->
+        <h2>Atenção: as Arraias são bastante importantes! Você sabia disso? Se não sabia, vem descobrir aqui com a gente!</h2>
+        <!-- TODO: Substituir o RESUMO_CURTO -->
+        <p>Neste site, iremos falar sobre arraias (peixes) cartilaginosas, que se alimentam de crustáceos e animais pequenos e têm um ferrão venenoso que usam para se proteger.</p>
+
+        <div class="actions" role="group" aria-label="Ações principais">
+          <!-- Botão obrigatório: Reconhecimento Facial -->
+          <button id="abrirIA" class="btn" aria-label="Iniciar reconhecimento facial">
+            Reconhecimento Facial
+          </button>
+
+          <!-- Botão obrigatório: Abrir Chatbot (também no topo) -->
+          <button id="btnAbrirChatbotHero" class="btn ghost" aria-label="Abrir chatbot">
+            Abrir Chatbot
+          </button>
+        </div>
+      </div>
+      <div class="imgwrap" aria-hidden="false">
+        <!-- TODO: Substituir a URL_IMAGEM_HERO -->
+        <img src="https://super.abril.com.br/wp-content/uploads/2025/01/2201-arraias-layout_site.jpg?quality=70&strip=info&w=720&h=440&crop=1" alt="Imagem de uma arraia nadando em água azul" />
+      </div>
+    </section>
+
+    <!-- NOVO: FAIXA DE DESTAQUES RÁPIDOS -->
+    <section class="fade-in" aria-label="Resumo rápido sobre arraias">
+      <div class="cards" role="list">
+        <article class="card" role="listitem">
+          <h3>+200 espécies</h3>
+          <p>Existem dezenas de espécies de arraias em rios e mares do mundo todo.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Peixes cartilaginosos</h3>
+          <p>Assim como os tubarões, o esqueleto é feito de cartilagem, não de osso.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Importantes para o ecossistema</h3>
+          <p>Controlam populações de pequenos animais no fundo, equilibrando o ambiente.</p>
+        </article>
+      </div>
+    </section>
+    <!-- FIM NOVO -->
+
+    <!-- CURIOSIDADES -->
+    <section id="curiosidades" aria-labelledby="titulo-curiosidades" class="fade-in">
+      <header>
+        <h2 id="titulo-curiosidades">Curiosidades</h2>
+        <p>Descobertas rápidas sobre o tema do fundo do mar.</p>
+      </header>
+      <ul class="facts-list" role="list">
+        <!-- TODO: Preencher de 3 a 5 curiosidades -->
+        <li><div class="text">As arraias têm barbatanas que se movem como asas e são parentes dos tubarões, mas se distinguem por serem peixes cartilaginosos de corpo achatado. Elas usam um "sexto sentido" de eletrorecepção para encontrar presas na areia. As arraias também podem usar seu ferrão na cauda, que contém um veneno capaz de causar dor intensa e outros sintomas graves.</div></li>
+        <li><div class="text">O ferrão é trocado regularmente: o espinho da arraia está em constante substituição e, por vezes, uma arraia pode ter dois ao mesmo tempo.</div></li>
+        <li><div class="text">Possuem órgãos elétricos: algumas espécies de arraias têm órgãos elétricos que emitem descargas de baixa intensidade para encontrar presas escondidas, mesmo sob a areia.</div></li>
+        <li><div class="text">São excelentes em se camuflar: com corpos achatados e coloração que se assemelha à do fundo do rio ou do mar, as arraias se enterram na areia para se camuflar, protegendo-se de predadores.</div></li>
+        <li><div class="text">Algumas têm o ferrão inativo: existem espécies de arraias de água doce, como a Heliotrygon, que têm ferrões vestigiais, pequenos e com baixa toxicidade, sendo consideradas inofensivas aos humanos.</div></li>
+      </ul>
+    </section>
+
+    <!-- NOVO: POR QUE AS ARRAIAS SÃO IMPORTANTES? -->
+    <section class="fade-in" aria-label="Importância das arraias">
+      <header>
+        <h2>Por que as arraias são importantes?</h2>
+        <p>Além de curiosas, elas têm um papel gigante na saúde dos rios e mares.</p>
+      </header>
+      <div class="cards" role="list">
+        <article class="card" role="listitem">
+          <h3>Equilíbrio do fundo</h3>
+          <p>Elas se alimentam de animais que vivem enterrados na areia, ajudando a controlar essas populações.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Indicadores de ambiente</h3>
+          <p>Quando arraias somem de certas áreas, pode ser sinal de pesca exagerada ou poluição.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Educação e turismo</h3>
+          <p>São usadas em programas de educação ambiental e atraem turistas em aquários e mergulhos.</p>
+        </article>
+      </div>
+    </section>
+    <!-- FIM NOVO -->
+
+    <!-- FATOS/CIÊNCIA -->
+    <section id="fatos" aria-labelledby="titulo-fatos" class="fade-in">
+      <header>
+        <h2 id="titulo-fatos">Fatos e Ciência</h2>
+        <p>Três pontos científicos para entender melhor.</p>
+      </header>
+      <div class="cards" role="list">
+        <!-- TODO: Preencher os cards com fatos -->
+        <article class="card" aria-label="Fato científico 1" role="listitem">
+          <h3>Você sabia que ?</h3>
+          <p>O esqueleto das arraias são feitos de cartilagem flexíveis, e não de ossos.</p>
+        </article>
+
+        <article class="card" aria-label="Fato científico 2" role="listitem">
+          <h3>Você ja imaginou ?</h3>
+          <p>Algumas arraiás possuem orgãos eletricos que usam para sentir a caça</p>
+        </article>
+
+        <article class="card" aria-label="Fato científico 3" role="listitem">
+          <h3>Você sabia que ?</h3>
+          <p>Diferentes de outras arraiá  que botam ovo,as arraiá são “vivípara”,ou seja,os filhotes nascem de ovos que se desenvolvem dentro do corpo da mãe.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="galeria" aria-labelledby="titulo-galeria" class="fade-in">
+      <header>
+        <h2 id="titulo-galeria">Galeria</h2>
+        <p>Imagens relacionadas ao tema com pequenas legendas.</p>
+      </header>
+
+      <div class="gallery" role="list">
+        <!-- TODO: Adicionar de 3 a 6 imagens na galeria. Duplique/remova figuras conforme necessário. -->
+        <figure role="listitem">
+          <img src="https://i0.wp.com/revistaamazonia.com.br/wp-content/uploads/2025/04/Arraia-de-agua-doce-onde-vive-e-por-que-ela-e-tao-temida-em-rios-brasileiros-2.webp" alt="Foto 1 relacionada a [[TEMA_DO_PROJETO]]" />
+          <figcaption>Essa é uma arraia de água doce</figcaption>
+        </figure>
+        <figure role="listitem">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzlvPpfl6aWC8nWDndbPZ5UtWo3Fpg7xFulYpQEDoQRVvEIMslLenMoKsPJ4fIrY9e9XE&usqp=CAU" alt="Foto 2 relacionada a [[TEMA_DO_PROJETO]]" />
+          <figcaption>Essa é uma arraia de agua doce no raso</figcaption>
+        </figure>
+        <figure role="listitem">
+          <img src="https://conexaoplaneta.com.br/wp-content/uploads/2022/05/arraias-tiete-conexao-planeta.jpg" alt="Foto 3 relacionada a [[TEMA_DO_PROJETO]]" />
+          <figcaption>Essa arraia esta fora da água veja como ela é linda</figcaption>
+        </figure>
+        <figure role="listitem">
+          <img src="https://pereirabarreto.sp.gov.br/wp-content/uploads/2021/02/Prefeitura-Municipal-alerta-toda-a-populacao-sobre-o-aparecimento-de-arraias-nos-rios-de-Pereira-Barreto.jpg" alt="Foto 4 relacionada a [[TEMA_DO_PROJETO]]" />
+          <figcaption>Elas são de diferentes cores como preta, marrom ou beje mas sempre com bolinhas brancas</figcaption>
+        </figure>
+        <figure role="listitem">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmYKK4NS6JgJ1fRHP4bvnd1BLTkiqKmRIg5s_-Uhf9FYlK9XB7K8-Qcktt8K8Zrc9VRRo&usqp=CAU" alt="Foto 5 relacionada a [[TEMA_DO_PROJETO]]" />
+          <figcaption>Elas são bem calmas</figcaption>
+        </figure>
+        <figure role="listitem">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Ocellate_river_stingray%2C_Boston_Aquarium.jpg" alt="Foto 6 relacionada a [[TEMA_DO_PROJETO]]" />
+          <figcaption>As arraias de água doce vivem principalmente em sistemas fluviais da América do Sul, Ásia, África e Austrália</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" aria-labelledby="titulo-faq" class="fade-in">
+      <header>
+        <h2 id="titulo-faq">Perguntas Frequentes</h2>
+        <p>Respostas rápidas sobre o projeto e o tema.</p>
+      </header>
+
+      <div class="faq">
+        <!-- TODO: Ajustar perguntas/respostas conforme o tema -->
+        <details>
+          <summary>As arraias são peixes ou mamíferos?</summary>
+          <p>As arraias são peixes cartilaginosos (possuem esqueleto feito de cartilagem, o mesmo material encontrado no nariz e nas orelhas humanos), intimamente relacionadas aos tubarões. Elas respiram debaixo d'água usando brânquias e não são mamíferos. </p>
+        </details>
+        <details>
+          <summary>As arraias são agressivas?</summary>
+          <!-- REMOVIDO </a> QUE QUEBRAVA -->
+          <p>Não, as arraias são geralmente animais dóceis e não agressivos, que evitam confrontos. Elas só ferroam em autodefesa, normalmente quando se sentem ameaçadas ou quando alguém pisa acidentalmente nelas em águas rasas. </p>
+        </details>
+        <details>
+          <summary> Por que as arraias ferroam e o que acontece se uma pessoa for picada?</summary>
+          <p>As arraias possuem um ou mais ferrões farpados e venenosos na cauda, que usam como mecanismo de defesa. A ferroada libera um veneno que causa dor intensa, inchaço e, em casos raros, pode ser fatal, embora a maioria das pessoas sobreviva com o tratamento médico adequado. </p>
+          <p></p>
+        </details>
+        <details>
+          <summary>O que as arraias comem?</summary>
+          <p>As arraias são carnívoras. Elas se alimentam de animais que vivem na areia ou debaixo dela, como moluscos (mariscos, ostras), caracóis, camarões, vermes e pequenos peixes. Elas usam um sentido especial de eletrorecepção para localizar presas escondidas.</p>
+        </details>
+        <details>
+          <summary>Onde as arraias vivem?</summary>
+          <p>A maioria das espécies de arraias habita águas costeiras tropicais e subtropicais rasas, em fundos de areia ou lodo. Algumas espécies, como as arraias-manta, vivem em mar aberto, enquanto outras, como as arraias de água doce, vivem exclusivamente em rios, inclusive na Amazônia.</p>
+        </details>
+      </div>
+</section>
+<section>
+      <!-- NOVO: BOX DE ALERTA DE SEGURANÇA -->
+      <div class="card" aria-label="Alerta de segurança com arraias">
+        <h3>⚠ Dica de segurança</h3>
+        <p>
+          Ao caminhar em águas rasas onde há arraias, o ideal é arrastar os pés na areia em vez de dar passos firmes.
+          Isso “avisa” a arraia, que se afasta, e diminui o risco de alguém pisar em cima dela e levar uma ferroada.
+        </p>
+      </div>
+      <!-- FIM NOVO -->
+    </section>
+
+    <!-- CTA FINAL -->
+    <section id="cta-final" aria-labelledby="titulo-cta" class="fade-in">
+      <header>
+        <h2 id="titulo-cta">Continue explorando</h2>
+        <p>Escolha um caminho para aprender ainda mais.</p>
+      </header>
+      <div class="cta" role="group" aria-label="Call to Action">
+        <a href="#fatos">Aprender mais</a>
+        <a href="#galeria">Ver imagens</a>
+        <a href="#creditos">Baixar material &amp; Fontes</a>
+      </div>
+    </section>
+
+    <!-- CRÉDITOS/FONTES -->
+    <section id="creditos" aria-labelledby="titulo-creditos" class="fade-in">
+      <header>
+        <h2 id="titulo-creditos">Créditos e Fontes</h2>
+        <p>Referências utilizadas neste projeto.</p>
+      </header>
+      <!-- TODO: Inserir links ou nomes das fontes -->
+      <article>
+        <p>[[FONTES_REFERENCIAS]]</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- Painel do Chatbot (Aside fixo) -->
+  <aside id="chatPane" role="complementary" aria-label="Painel do chatbot" aria-hidden="true">
+    <div class="chat-header">
+      <strong>Chatbot Demonstrativo</strong>
+      <div>
+        <button id="closeChat" class="icon-btn" aria-label="Fechar chatbot">✖</button>
+      </div>
+    </div>
+    <div class="chat-body" id="chatHistory" aria-live="polite">
+      <!-- Placeholders de histórico -->
+      <div class="msg bot">Olá! Sou um protótipo de chatbot. Como posso ajudar sobre [[TEMA_DO_PROJETO]]?</div>
+      <div class="msg user">Quero saber curiosidades rápidas.</div>
+      <div class="msg bot">Veja a seção “Curiosidades” ou pergunte algo específico!</div>
+    </div>
+    <form class="chat-input" id="chatForm" aria-label="Entrada de mensagem do chatbot">
+      <input id="chatText" type="text" name="q" placeholder="Digite sua mensagem..." aria-label="Escreva sua mensagem" />
+      <button class="icon-btn" type="submit" aria-label="Enviar mensagem">➤</button>
+    </form>
+  </aside>
+
+  <footer class="wrap" role="contentinfo">
+    <p>&copy; <span id="ano"></span> | Projeto: [[TEMA_DO_PROJETO]] — <a href="#topo" id="backToTop">Voltar ao topo</a></p>
+  </footer>
+<script src="script.js"></script>
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+<df-messenger
+  intent="WELCOME"
+  chat-title="ECOBOT"
+  agent-id="6c106d6c-eef7-41db-92b4-5bf82848937e"
+  language-code="pt-br">
+</df-messenger>
+
+<!-- Modal da câmera -->
+<div id="cameraModal" class="modal" aria-hidden="true" style="display:none;">
+  <div class="modal-content">
+    <button id="fecharModal" class="botao-fechar" title="Fechar">❌</button>
+    <h2 class="modal-title">Reconhecimento Facial</h2>
+    <div class="video-wrap">
+      <video id="video" autoplay muted playsinline></video>
+    </div>
+    <div class="controls">
+      <button id="tirarFoto" class="botao-foto" title="Tirar foto">📸</button>
+    </div>
+    <p id="modalStatus" class="modal-status">Aguardando...</p>
+    <canvas id="fotoCanvas" style="display:none;"></canvas>
+  </div>
+</div>
+
+</body>
+</html>
